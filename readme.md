@@ -23,3 +23,10 @@ Simple guide to creating quick Progressive web apps.
 * accessed via web
 * can be installed
 * used offline and push notification
+
+## Project 1 PWA Food App
+
+### Materialize css
+
+* Downland and move folder to project
+* 

@@ -1,0 +1,109 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PWA recipe APP</title>
+    <link rel="stylesheet" href="/css/materialize.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <script src="js/materialize.min.js"></script>
+</head>
+    <body class="grey lighten-4">
+
+        <!-- top nav -->
+        <nav class="z-depth-0">
+            <div class="new-wrapper container">
+                <a href="/">Recipe PWA</a>
+                <span class="right grey-text text-darken-1"><i class="material-icons sidenav-trigger" data-target="side-menu">menu</i></span>
+            </div>
+        </nav>
+
+        <!-- side nav -->
+        <ul id="side-menu" class="sidenav side-menu">
+            <li><a class="subheader"> Qasinow Recipe PWA</a></li>
+            <li><a href="/" class="waves-effect"> Home </a></li>
+            <li><a href="pages/about.html" class="waves-effect"> About </a></li>
+            <li> <div class="divider"></div></li>
+            <li><a href="pages/contact.html" class="waves-effect"><i class="material-iconn"></i>mail_outline</a>Contact</li>
+        </ul>
+
+        <!-- recipe's -->
+
+        <div class="recipes container grey-text text-darken-1">
+            <div class="card-panel recipe white row">
+                <img src="/img/biryani.png" alt="Food Thumb">
+                <div class="recipe-details">
+                    <div class="recipe-title"> Biryani </div>
+                    <div class="recipe-ingredients">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique accusamus sit repellendus doloremque vel necessitatibus non cupiditate itaque, eos, corporis praesentium minus voluptatibus voluptatem.</div>
+                </div>
+                <div class="recipe-delete"><i class="material-icons">delete_outline</i></div>
+            </div>
+            <div class="card-panel recipe white row">
+                <img src="img/biryani.png" alt="Food Thumb">
+                <div class="recipe-details">
+                    <div class="recipe-title"> Biryani </div>
+                    <div class="recipe-ingredients"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique accusamus sit repellendus doloremque vel necessitatibus non cupiditate itaque, eos, corporis praesentium minus voluptatibus voluptatem.</div>
+                </div>
+                <div class="recipe-delete"><i class="material-icons">delete_outline</i></div>
+            </div>
+            <div class="card-panel recipe white row">
+                <img src="img/biryani.png" alt="Food Thumb">
+                <div class="recipe-details">
+                    <div class="recipe-title"> Biryani </div>
+                    <div class="recipe-ingredients"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique accusamus sit repellendus doloremque vel necessitatibus non cupiditate itaque, eos, corporis praesentium minus voluptatibus voluptatem.</div>
+                </div>
+                <div class="recipe-delete"><i class="material-icons">delete_outline</i></div>
+            </div>
+            <div class="card-panel recipe white row">
+                <img src="img/biryani.png" alt="Food Thumb">
+                <div class="recipe-details">
+                    <div class="recipe-title"> Biryani </div>
+                    <div class="recipe-ingredients"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique accusamus sit repellendus doloremque vel necessitatibus non cupiditate itaque, eos, corporis praesentium minus voluptatibus voluptatem.</div>
+                </div>
+                <div class="recipe-delete"><i class="material-icons">delete_outline</i></div>
+            </div>
+            <div class="card-panel recipe white row">
+                <img src="img/biryani.png" alt="Food Thumb">
+                <div class="recipe-details">
+                    <div class="recipe-title"> Biryani </div>
+                    <div class="recipe-ingredients"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique accusamus sit repellendus doloremque vel necessitatibus non cupiditate itaque, eos, corporis praesentium minus voluptatibus voluptatem.</div>
+                </div>
+                <div class="recipe-delete"><i class="material-icons">delete_outline</i></div>
+            </div>
+            <div class="card-panel recipe white row">
+                <img src="img/biryani.png" alt="Food Thumb">
+                <div class="recipe-details">
+                    <div class="recipe-title"> Biryani </div>
+                    <div class="recipe-ingredients"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique accusamus sit repellendus doloremque vel necessitatibus non cupiditate itaque, eos, corporis praesentium minus voluptatibus voluptatem.</div>
+                </div>
+                <div class="recipe-delete"><i class="material-icons">delete_outline</i></div>
+            </div>
+            <div class="card-panel recipe white row">
+                <img src="img/biryani.png" alt="Food Thumb">
+                <div class="recipe-details">
+                    <div class="recipe-title"> Biryani </div>
+                    <div class="recipe-ingredients"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique accusamus sit repellendus doloremque vel necessitatibus non cupiditate itaque, eos, corporis praesentium minus voluptatibus voluptatem.</div>
+                </div>
+                <div class="recipe-delete"><i class="material-icons">delete_outline</i></div>
+            </div>
+        </div>
+
+        <!--Add icon -->
+        <div class="center"><a class="btn-floating btn-small add-btn sidenav-trigger" data-target="side-form"><i class="material-icons">add</i></a></div>
+
+        <!-- add new recipe side nav-->
+        <div id="side-form" class="sidenav side-form">
+            <form action="" class="add-recipe container section">
+                <h4>New Recipe</h4>
+                <div class="divider"></div>
+                <div class="input-field"><input type="text" class="validate" id="title" placeholder="Chicken Karahi"><label for="title">Recipe Title</label></div>
+                <div class="input-fields"><input type="text" id="ingredients" class="validate" placeholder="tamamtar piyaza waagera"><label for="ingredients">Ingredients</label></div>
+                <div class="input-field center"><button class="btn-small">Add</button></div>
+            </form>
+        </div>
+
+        <script src="js/ui.js"></script>
+    </body>
+</html>
