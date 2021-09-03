@@ -42,3 +42,19 @@ Simple guide to creating quick Progressive web apps.
 * Link json in all html files `<link rel="manifest" href="/manifest.json">`
 
 ### Android Emulator 
+* android studio 
+* go to pc loclhoset address 10.0.2.2:portn 
+
+### iphone os
+* icon not suported
+* insert link in html
+* 
+```html
+<link rel="apple-touch-icon" href="img/icons/88.png">
+<link rel="apple-touch-icon" href="img/icons/256.png">
+<!-- and so on-->
+ ```
+
+* For status bar `<meta name="apple-mobile-web-app-status-bar" content="#aa7700">`
+
+
