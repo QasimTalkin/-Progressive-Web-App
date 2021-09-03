@@ -10,7 +10,8 @@ self.addEventListener('activate', (evt)=>{
     console.log('sw activated', evt)
 });
 
+let dem = 0;
 // fetch event 
 self.addEventListener('fetch', (evt)=> {
-console.log(evt);
+console.log(dem++);
 });
