@@ -26,7 +26,19 @@ Simple guide to creating quick Progressive web apps.
 
 ## Project 1 PWA Food App
 
-### Materialize css
+* Basic project template set up 
 
-* Downland and move folder to project
-* 
+### Step 1 L Web App manifest
+
+* Json file with info for browser on how to display the app on phone
+* Root of the project
+* `manifest.json`
+* Json file
+  * short_name ->  used for icon name on device.
+  * display:standalone -> not like browser
+  * background_color -> when first loading app
+  * orientation -> portrait-primary
+  * inco-> add array of icon 
+* Link json in all html files `<link rel="manifest" href="/manifest.json">`
+
+### Android Emulator 
