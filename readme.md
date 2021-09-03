@@ -24,7 +24,7 @@ Simple guide to creating quick Progressive web apps.
 * can be installed
 * used offline and push notification
 
-## Project 1 PWA Food App
+## As webAPP (manifest, HTML, css ....)
 
 * Basic project template set up 
 
@@ -57,4 +57,51 @@ Simple guide to creating quick Progressive web apps.
 
 * For status bar `<meta name="apple-mobile-web-app-status-bar" content="#aa7700">`
 
+## As progressive webAPP (service worker)
 
+* Load content offline without internet
+* sync data upon connection
+* push notification
+* Runs on a diffrent thread irrespective of html page (has not acess to DOM)
+* background process
+* listens for event in background to reposed accordingly
+  
+### service worker life Cycle 
+
+* project we create `sw.js` giving it global scope
+* first register it on browser with app.js or main js
+* upon registration its put on separate sw thread
+* fires installs event (we can do multiple manipulations here)
+* fires active event (sw now listens for events)
+* upon refresh does nothing unless sw code changes
+* new sw active event gets strted only when app tab/browser with old SW are closed
+
+### Registering service worker
+
+* created in root dir `sw.js` for global access 
+#### regitering sw using `app.js`
+
+* look for browser support 
+* returns promise 
+```js
+// Service worker registration 
+if ('serviceWorker' in navigator){
+    navigator.serviceWorker.register('sw.js').then((reg)=>{
+        console.log("service worker registered ", reg)
+    }).catch((error)=> console.log("Could not register worker", error));
+  } else console.log("SW not supported");
+```
+
+#### Install event 
+
+* while sw is being installed 'install event' is triggred 
+* we lsiten for this on sw.js
+* Install event wont be triggred again unless `sw.js` file has changes
+* we could use this to add assets for offline mode (css, js and so on)
+* Keep devtools -> update on reload checked
+
+
+#### Fetch Events
+* save a trip to server on fetch 
+* look for items in cashe and try to work offline when possible 
+  
