@@ -1,7 +1,7 @@
 {
     "name":"Qasim Food App",
     "short_name":"QFood",
-    "start_url":"/index.html",
+    "start_url":"index.html",
     "display":"standalone", 
     "background_color": "#9A7A43",
     "theme_color": "#FFE1C4",
