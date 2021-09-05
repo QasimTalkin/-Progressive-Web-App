@@ -105,3 +105,52 @@ if ('serviceWorker' in navigator){
 * save a trip to server on fetch 
 * look for items in cashe and try to work offline when possible 
   
+#### Offline behavior
+
+* load content offline using cashe api
+* storing assets locally
+* disable browser cashed and we store cashe using sw
+* sw store assets from server in cashe
+* if we go offline sw looks up cashe
+**Resourses we need to cashe**
+* App shell assets that dont change over time 
+* We do it inside install event handler
+```js
+  self.addEventListener('install', (evt) =>{
+    // console.log('Install Triggered', evt);
+    evt.waitUntil(
+        caches.open(staticCacheName).then((cache)=>{
+            console.warn('adding assets');
+            cache.addAll(assets);
+            console.warn('Done assets');
+        });
+
+    );
+    
+
+});
+```
+
+#### intercepting request to use cache Offline
+
+* check chashe for fetch request insted of server
+
+* `fetch event listner` we can intercept here 
+* on fetch check if resource exists in cache 
+
+```js
+self.addEventListener('fetch', (evt)=> {
+//console.log(evt);
+    
+evt.respondWith(caches.match(evt.request).then( response => {
+    return response || fetch(evt.request);
+}
+
+))
+```
+
+#### cache versioning
+
+* delete previous caches
+* update new cache based on version currently 
+* in activate so new cache is worked on before fetch 
