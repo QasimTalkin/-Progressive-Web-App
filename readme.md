@@ -153,4 +153,20 @@ evt.respondWith(caches.match(evt.request).then( response => {
 
 * delete previous caches
 * update new cache based on version currently 
-* in activate so new cache is worked on before fetch 
+* in activate so new cache is worked on before fetch
+
+**Caching approch**
+* wait for user to browse pages to cache
+* casche response form server into dynamic assets
+* if the page has been cached brose it if not add to dynamic
+
+**What if user visits the page while offline**
+
+* get a 404 for offline page 
+* Show a fallback page when offline. 
+* Create a fallback page. 
+* store it in **static cache** 
+* make sure to only display it if the request is resourcing a page. not image or css or something. 
+
+**Limit cache to numbe of items**
+* cache size limit function. 

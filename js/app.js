@@ -5,3 +5,5 @@ if ('serviceWorker' in navigator){
         console.log("service worker registered ", reg)
     }).catch((error)=> console.log("Could not register worker", error));
   } else console.log("SW not supported");
+
+

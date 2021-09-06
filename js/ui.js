@@ -7,3 +7,4 @@ $( document ).ready(function() {
     M.Sidenav.init(sideForm, {edge: 'left'});
 
   });
+
