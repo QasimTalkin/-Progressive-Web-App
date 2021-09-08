@@ -56,25 +56,28 @@ self.addEventListener('activate', (evt)=>{
 let dem = 0;
 // fetch event 
 self.addEventListener('fetch', (evt)=> {
-//console.log(evt);   
-    evt.respondWith(caches.match(evt.request).then( response => {
-            // reply with stored cache
-                return response || fetch(evt.request).then(
-                    // add to dynamic cache 
-                    newFetchResponse => { 
-                        return caches.open(dynamicCacheName).then(cache => {
-                            //newFetchResponse can be only used one, we make a copy of it
-                            cache.put(evt.request.url, newFetchResponse.clone());
-                            limitCacheItem(dynamicCacheName, 15);
-                            return newFetchResponse;
-                        });
-                    }
-                );
-            }
-      // if erro or unable to serve from server or offline
-      // show html page only when request is for a page and not image 
-        ).catch(()=>{
-            if(evt.request.url.indexOf('.html')>-1) {return caches.match('fallBackPage.html')}// add more if to fall back on iamges or other resource
-        })
-    );
+
+    if(evt.request.url.indexOf('firebase.googleapis.com')=== -1) {
+        evt.respondWith(caches.match(evt.request).then( response => {
+                // reply with stored cache
+                    return response || fetch(evt.request).then(
+                        // add to dynamic cache 
+                        newFetchResponse => { 
+                            return caches.open(dynamicCacheName).then(cache => {
+                                //newFetchResponse can be only used one, we make a copy of it
+                                cache.put(evt.request.url, newFetchResponse.clone());
+                                limitCacheItem(dynamicCacheName, 15);
+                                return newFetchResponse;
+                            });
+                        }
+                    );
+                }
+        // if erro or unable to serve from server or offline
+        // show html page only when request is for a page and not image 
+            ).catch(()=>{
+                if(evt.request.url.indexOf('.html')>-1) {return caches.match('fallBackPage.html')}// add more if to fall back on iamges or other resource
+            })
+        );
+    } 
+
 });

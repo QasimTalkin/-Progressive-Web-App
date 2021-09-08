@@ -170,3 +170,11 @@ evt.respondWith(caches.match(evt.request).then( response => {
 
 **Limit cache to numbe of items**
 * cache size limit function. 
+
+### DATA in PWA
+
+* acessing DATA in PWA
+* google firebase 
+* create project -> database 
+* new collection -> documents -> title and recipes
+* 
