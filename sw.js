@@ -33,9 +33,7 @@ self.addEventListener('install', (evt) =>{
     // console.log('Install Triggered', evt);
     evt.waitUntil(
         caches.open(staticCacheName).then((cache)=>{
-            console.warn('adding assets');
             cache.addAll(assets);
-            console.warn('Done assets');
         })
     );
 
