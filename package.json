@@ -1,0 +1,22 @@
+{
+  "name": "pwa-projects",
+  "version": "1.0.0",
+  "description": "Simple guide to creating quick Progressive web apps.",
+  "main": "sw.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/QasimTalkin/PWA-projects.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/QasimTalkin/PWA-projects/issues"
+  },
+  "homepage": "https://github.com/QasimTalkin/PWA-projects#readme",
+  "dependencies": {
+    "firebase": "^9.0.1"
+  }
+}

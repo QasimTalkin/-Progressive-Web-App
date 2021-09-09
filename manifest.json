@@ -1,11 +1,12 @@
 {
-    "name":"Qasim Food App",
-    "short_name":"QFood",
+    "name":"Qlive Foods",
+    "short_name":"Qlive",
     "start_url":"index.html",
     "display":"standalone", 
     "background_color": "#9A7A43",
     "theme_color": "#FFE1C4",
     "orientation" : "portrait-primary", 
+    "prefer_related_applications": false,
     "icons":[
         {
             "src":"img/icons/72.png",
