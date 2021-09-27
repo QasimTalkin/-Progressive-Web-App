@@ -1,5 +1,7 @@
 # PWA basic concepts
-[Live link](https://qasimtalkin.github.io/-Progressive-Web-App/)
+
+## [Live link](https://qasimtalkin.github.io/Progressive-Web-App/)
+
 Simple guide to creating quick Progressive web apps.
 
 ## Normal website to Native mobile features
